@@ -1,0 +1,135 @@
+@font-face {
+  font-family: Lato-Bold ;
+  src: url(../fonts/Lato/Lato-Bold.ttf);
+  font-weight: 700;
+  font-display: wrap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Regular ;
+  src: url(../fonts/Lato/Lato-Regular.ttf);
+  font-weight: 700;
+  font-display: wrap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Black ;
+  src: url(../fonts/Lato/Lato-Black.ttf);
+  font-weight: 700;
+  font-display: wrap;
+  font-style: normal;
+}
+@font-face {
+  font-family: Lato-Light ;
+  src: url(../fonts/Lato/Lato-Light.ttf);
+  font-weight: 700;
+  font-display: wrap;
+  font-style: normal;
+}
+.textarea{
+  resize: none;
+  width: 100%;
+  height: 200px;
+}
+@media (max-width: 588px) {
+  .textarea{
+    resize: none;
+    width: 100%;
+    height: 100px;
+  }
+}
+@media (max-width: 355px) {
+  .textarea{
+    resize: none;
+    width: 100%;
+    height: 50px;
+  }
+}
+body{
+  box-sizing: border-box;
+}
+.wrap{
+  display: block;
+  padding: 18px 0 ;
+  padding: 40px;
+  box-shadow: 0 -4px 4px rgba(0,0,0,0.17) ;
+}
+.wrapRadio{
+  margin: 10px 0;
+}
+.select{
+  outline-color: rgba(0,0,0,0.17);
+}
+.inputAddValue{
+  width: 100%;
+  &::-webkit-input-placeholder{
+    text-indent: 0px;
+    transition: text-indent 0.6s ease;
+  }
+  &:focus::placeholder{
+    text-indent: 500px;
+  }
+}
+input{
+  display: block;
+}
+.inputAddName{
+  text-align: center;
+  outline: none;
+  border: none;
+  background: transparent;
+  transition:  .3s ease;
+  width: 100%;
+  transition: placeholder 0.5s;
+  &::-webkit-input-placeholder{
+    text-indent: 0px;
+    transition: text-indent 0.6s ease;
+  }
+  &:focus::placeholder{
+    text-indent: 500px;
+  }
+}
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 0 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form{
+  margin: 0 auto;
+}
+.title{
+
+  padding: 10px 20px; 
+  width: 90%; 
+}
+.wrapForm{
+  box-shadow: 0 4px 6px rgba(0,0,0,0.17) ;
+  padding: 40px;
+}
+.radio{
+  display: inline;
+}
+.wrapRadio{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.file{
+  margin: 50px 0;
+}
+h2{
+  font-family:"Lato-Bold";
+}
+.input{
+  appearance: none;
+  background: transparent;
+  border: 1px solid #bfbfbf;
+  border-radius: 2px;
+  outline-color: rgba(0,0,0,0.17);
+}
+.wrapBtn{
+  padding-left: 130px;
+}

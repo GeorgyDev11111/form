@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/main.css">
+  <title>Document</title>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap wrapForm">
+      <form action="" method="post">
+        <div class="block">
+          <h2>Новая заявка</h2>
+          <label for="">заголовок</label>
+          <input class="input title" type="text">
+        </div>
+        <div class="block">
+          <h2>Категория</h2>
+          <div class="wrapRadio">
+          <input id="category1" class="radio" type="radio" name="some">
+          <label for="category1">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quis, obcaecati.</label>
+          </div>  
+          <div class="wrapRadio">
+          <input id="category2" class="radio" type="radio" name="some">
+          <label for="category2">Шины</label>
+          </div>
+        </div>
+        <div class="block">
+          <h2>Вид заявки</h2>
+          <div class="wrapRadio">
+            <input id="bid1" class="radio" type="radio" name="some2">
+            <label for="bid1">Запрос цены и виды доставок</label>
+          </div>
+            <div class="wrapRadio">
+              <input id="bid2" class="radio" type="radio" name="some2">
+              <label for="bid2">Пополнение складов</label>
+            </div>
+            <div class="wrapRadio">
+              <input id="bid3" class="radio" type="radio" name="some2">
+              <label for="bid3">Спецзаказ</label>
+            </div>
+          </div>
+        <div class="block">
+        <h2>Склад поставки</h2>
+        <select class="select" name="sel" id="" >
+          <option value="">Выберите склад поставки</option>
+          <option value="">1</option>
+          <option value="">1</option>
+          <option value="">1</option>
+        </select>
+        </div>
+        <div class="block">
+        <h2>Состав заявки</h2>
+        <div class="content">
+          <div class="wrap">
+            <input class="inputAddName" placeholder="Введите название" type="text">
+            <input class="inputAddValue input" placeholder="Введите текст" type="text">
+          </div>
+        </div>
+        <div class="wrapBtn">
+        <button class="addBtn">+</button>
+        <button class="remBtn">-</button>
+      </div>
+        </div>
+        <div class="block">
+        <input class="file" type="file">
+        </div>
+
+        <div class="block">
+        <p>Комментарий</p>
+        <textarea class="textarea" id="story" name="story" rows="5" cols="33"></textarea><br><br>
+        <button type="submit">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script/my.js"></script>
+</body>
+</html>
