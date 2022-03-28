@@ -101,10 +101,14 @@ form{
   margin: 0 auto;
 }
 .title{
-
   padding: 10px 20px; 
   width: 90%; 
+  &:focus{
+    border-color: rgba(444,0,0,0.2) ;
+    outline-color: rgba(444,0,0,0.2);
+  }
 }
+
 .wrapForm{
   box-shadow: 0 4px 6px rgba(0,0,0,0.17) ;
   padding: 40px;
@@ -130,6 +134,23 @@ h2{
   border-radius: 2px;
   outline-color: rgba(0,0,0,0.17);
 }
+.titleTog{
+  border: 1px solid rgba(0,444,0,0.2) ;
+  outline-color: rgba(0,444,0,0.2);
+  &:focus{
+    border-color: rgba(0,444,0,0.2) ;
+    outline-color: rgba(0,444,0,0.2);
+  }
+}
+.wrapInst{
+  margin-bottom: 30px;
+}
 .wrapBtn{
   padding-left: 130px;
+}
+.shadow1{
+  box-shadow: 0 -4px 4px rgba(11,25,123,0.17) ;
+}
+.shadow2{
+  box-shadow: 0 -4px 4px rgba(0,444,0,0.2) ;
 }

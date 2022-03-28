@@ -6,13 +6,24 @@ let html = document.querySelector('.content');
 let count = 0;
 addBtn.addEventListener('click' , () => {
   event.preventDefault();
-  html.insertAdjacentHTML('beforeend', `
-  <div class="wrap">
-    <input class="inputAddName inputAddName${count}" placeholder="Введите название" type="text">
-    <input class="inputAddValue inputAddValue${count}" placeholder="Введите текст" type="text">
-  </div>
-  `
-  );
+  if(count % 2  ==  0){
+    html.insertAdjacentHTML('beforeend', `
+    <div class="wrapInst wrap shadow1">
+      <input class="inputAddName inputAddName${count} " placeholder="Введите название" type="text">
+      <input class="inputAddValue inputAddValue${count}" placeholder="Введите текст" type="text">
+    </div>
+    `
+    );
+  }else{
+    html.insertAdjacentHTML('beforeend', `
+    <div class="wrapInst wrap shadow2">
+      <input class="inputAddName inputAddName${count} " placeholder="Введите название" type="text">
+      <input class="inputAddValue inputAddValue${count}" placeholder="Введите текст" type="text">
+    </div>
+    `
+    );
+  }
+
   count++;
 })
 remBtn.addEventListener('click' , removeChild);
@@ -21,6 +32,14 @@ function removeChild () {
   event.preventDefault();
   document.querySelector('.content').lastElementChild.remove();
 }
+document.querySelector('.title').oninput = () => {
+  if(document.querySelector('.title').value.length > 4){
+    document.querySelector('.title').classList.add('titleTog');
+  }else{
+    document.querySelector('.title').classList.remove('titleTog');
+  }
+}
+
 /* Валидация  */
  let sub = document.querySelector('.sub');
 
@@ -36,13 +55,14 @@ sub.addEventListener('click' , () => {
   event.preventDefault();
   const title = document.querySelector('.title').value;
 
-  if(title == ''){
+  if(title.length < 5){
     alert('Заполниет полe: Заголовок')
     
   }else{
     if(category1.checked || category2.checked){
       if(bid1.checked || bid2.checked || bid3.checked){
         alert('ОК 200');
+        count = 0;
       }else{
         alert('Заполниет поле: Вид заявки ');
       }
